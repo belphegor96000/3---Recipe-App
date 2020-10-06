@@ -1,5 +1,9 @@
 const meals = document.getElementById('meals')
 
+const searchTerm = document.getElementById('search-term')
+const searchBtn = document.getElementById('search')
+
+
 getRandomMeal()
 
 async function getRandomMeal() {
@@ -40,10 +44,19 @@ function addMeal(mealData, random = false) {
     </div>
     `
 
+    const btn = meal.querySelector('.meal-body .fav-btn')
+
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('active')
+    })
+
     meals.appendChild(meal)
 }
 
    
+
+
+
 
 
 
